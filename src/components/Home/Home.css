@@ -7,50 +7,65 @@
 	padding: 3rem 1rem; /* Add some padding */
 	min-height: 70vh; /* Give it some height */
 	flex-wrap: wrap; /* Allow wrapping on smaller screens */
-  }
+}
   
-  .home-content {
+.home-content {
 	flex: 1 1 500px; /* Allow content to grow/shrink, base size 500px */
 	text-align: left; /* Align text to the left */
 	display: flex;
 	flex-direction: column; /* Stack content vertically */
 	align-items: flex-start; /* Align items to the start (left) */
 	gap: 1rem; /* Space between text elements and button */
-  }
+}
   
-  .home-content h1 {
+.home-content h1 {
 	color: var(--clr-primary); /* Make heading stand out */
-  }
+}
   
-  .home-image-container {
+.home-image-container {
 	flex: 1 1 400px; /* Allow image container to grow/shrink */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	max-width: 450px; /* Limit image size */
-  }
+}
   
-  .home-image {
+.home-image {
 	max-width: 100%;
 	height: auto; /* Maintain aspect ratio */
 	object-fit: contain;
-  }
+}
   
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
+/* Responsive adjustments */
+@media (max-width: 768px) {
 	.home-section {
-	  flex-direction: column; /* Stack image and content vertically */
-	  text-align: center; /* Center text on smaller screens */
+		flex-direction: column; /* Stack image and content vertically */
+		text-align: center; /* Center text on smaller screens */
+		padding: 2rem 0.75rem; /* Adjust padding */
+		gap: 1.5rem; /* Reduce gap between elements */
 	}
-  
+
 	.home-content {
-	  text-align: center;
-	  align-items: center; /* Center items in the column */
-	  order: 2; /* Show text below image */
+		text-align: center;
+		align-items: center; /* Center items in the column */
+		order: 2; /* Show text below image */
+		width: 100%; /* Full width */
 	}
-  
+
 	.home-image-container {
-	  order: 1; /* Show image above text */
-	  margin-bottom: 2rem;
+		order: 1; /* Show image above text */
+		margin-bottom: 1rem;
 	}
-  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+	.home-section {
+		min-height: auto; /* Remove fixed height on very small screens */
+		padding: 1.5rem 0.5rem;
+	}
+	
+	.home-content h1 {
+		font-size: clamp(1.8rem, 8vw, 2.5rem); /* More responsive font size */
+	}
+}

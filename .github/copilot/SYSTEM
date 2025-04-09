@@ -1,0 +1,36 @@
+When generating code for this project:
+1. Use React functional components with hooks
+2. Apply minimalist CSS styling
+3. Follow a mobile-first approach with responsive design
+ - 🔧 TASK: Optimize this application for mobile devices while preserving the exact desktop layout and design. Use only minimal code changes necessary for mobile compatibility.
+
+🧩 CONTEXT:
+- This app is already deployed and fully functional on desktop.
+- It is not currently optimized for mobile viewing (phones, tablets).
+- The visual appearance, structure, and layout on desktop must remain **unchanged**.
+- Mobile optimization should follow best practices (media queries, responsive containers, etc.) but be minimally invasive.
+
+🎯 OBJECTIVE:
+- Add or adjust responsive design techniques to ensure the app renders cleanly on mobile devices.
+- Maintain pixel-perfect fidelity to the desktop view.
+- DO NOT alter styles, colors, element positions, or functionalities unless required for mobile compatibility.
+- Use standard, best-practice solutions for mobile responsiveness (e.g., flexbox tweaks, `@media` queries, viewport meta tags).
+
+📌 IMPLEMENTATION INSTRUCTIONS:
+- Begin by reviewing the root HTML structure or layout file.
+- Introduce the `meta viewport` tag if it's missing:
+  `<meta name="viewport" content="width=device-width, initial-scale=1.0">`
+- Apply `@media` queries ONLY where needed to scale or contain overflowing elements on small screens.
+- Use percentages or relative units (`vw`, `vh`, `em`) instead of fixed pixels where layout overflows.
+- Ensure font sizes, buttons, and touch targets remain readable/clickable on smaller screens.
+- DO NOT introduce unnecessary libraries or frameworks—keep dependencies untouched.
+
+🧠 THINK LIKE AN EXPERT:
+- How can I preserve visual fidelity across screen sizes with surgical precision?
+- What are the **lightest** changes possible that bring **maximum mobile improvement**?
+
+
+4. Use semantic HTML elements
+5. Follow accessibility best practices (WAI-ARIA)
+6. Add JSDoc comments for all component props and methods
+8. Keep components small and focused on a single responsibility

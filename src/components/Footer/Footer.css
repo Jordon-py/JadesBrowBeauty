@@ -7,10 +7,9 @@
   align-items: center; /* Center items vertically */
   justify-content: center; /* Center items horizontally */
   line-height: 100%;
-
 }
 
-#follow-us.footer{
+#follow-us.footer {
   display: flex;
   flex-direction: row;
   align-items: flex-start; /* Center items vertically */
@@ -24,7 +23,6 @@
   box-shadow: 0 0 10px lch(from var(--clr-primary) l c h / 0.25);
 }
 
-
 #sec.footer-section {
   display: flex;
   flex-direction: row;
@@ -36,8 +34,7 @@
   border-left: 1px solid var(--clr-border);
   border-right: 1px solid var(--clr-border);
   padding: 10px; /* Vertical and horizontal padding */
-  box-shadow:   0 0 10px lch(from var(--clr-primary) l c h / 0.15);
-
+  box-shadow: 0 0 10px lch(from var(--clr-primary) l c h / 0.15);
 }
 
 .footer-container {
@@ -53,8 +50,8 @@
   justify-content: center; /* Space out sections */
   align-items: center; /* Align items to the top */
   flex-wrap: wrap; /* Allow wrapping on smaller screens */
-   /* Space between sections */
-   max-height: 180px; /* Limit height for wrapping */
+  /* Space between sections */
+  max-height: 180px; /* Limit height for wrapping */
 }
 
 .footer-section {
@@ -63,11 +60,11 @@
   flex: 1 1 200px; /* Grow/shrink, base width 200px */
   margin-bottom: 0; /* Add space below sections when wrapped */
   min-width: 180px; /* Ensure minimum width before wrapping */
-  max-height:200px;
+  max-height: 200px;
   align-items: center; /* Center items in the section */
   justify-content: center; /* Center items in the section */
   text-align: center; /* Center text within sections */
-  box-shadow:   0 0 10px lch(from var(--clr-primary) l c h / 0.15); /* Add shadow */
+  box-shadow: 0 0 10px lch(from var(--clr-primary) l c h / 0.15); /* Add shadow */
 }
 
 #us.footer-title {
@@ -82,24 +79,23 @@
 #contact-title.footer-title {
   font-size: 2rem;
   font-weight: 600;
-  padding-top:  1%; /* Add space above title */
+  padding-top: 1%; /* Add space above title */
   margin-top: 0;
   margin-bottom: auto;
   color: var(--clr-primary); /* Use LCH primary color for titles */
 }
 
-
 .footer-links { /* Targeting the ul specifically */
-    list-style: circle;
-    padding: 2%;
-    margin: 0;
+  list-style: circle;
+  padding: 2%;
+  margin: 0;
 }
 
 .footer-links li {
-    padding: 1%;
-    margin-left: 1%;
-    margin-top: 10%;
-    margin-bottom: 1rem; /* Space between links */
+  padding: 1%;
+  margin-left: 1%;
+  margin-top: 10%;
+  margin-bottom: 1rem; /* Space between links */
 }
 
 .footer-link {
@@ -134,12 +130,47 @@
     text-align: center; /* Center text within sections */
   }
   .footer-section {
-      flex-basis: auto; /* Reset basis */
-      width: 100%; /* Take full width */
-      max-width: 350px; /* Limit width for centered content */
+    flex-basis: auto; /* Reset basis */
+    width: 100%; /* Take full width */
+    max-width: 350px; /* Limit width for centered content */
   }
   .footer-copyright {
     text-align: center; /* Center copyright text */
     margin-top: 1rem; /* Add space above copyright when stacked */
+  }
+  /* Ensure links have adequate touch targets */
+  .footer-link {
+    display: inline-block;
+    padding: 5px;
+    margin: 2px 0;
+  }
+}
+
+/* Optimize footer for very small screens */
+@media (max-width: 480px) {
+  #sec.footer-section {
+    flex-direction: column; /* Stack vertically on very small screens */
+    width: 95%; /* Use more screen width */
+    padding: 15px 10px; /* Adjust padding */
+  }
+
+  .footer-title {
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .footer-container {
+    max-height: none; /* Remove height limit on small screens */
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .footer-link {
+    padding: 8px; /* Increase touch target size */
   }
 }

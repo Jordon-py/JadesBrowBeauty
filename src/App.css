@@ -15,7 +15,26 @@
   flex-grow: 1; /* Allows this section to take up available space */
   padding: 2rem; /* Add padding here or within specific page components */
   width: 100%; /* Ensure it takes full width within #root */
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  flex-wrap: nowrap;
+  
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem; /* Reduce padding on smaller screens */
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .main-content {
+    padding: 0.75rem 0.5rem;
+  }
 }
 
 /* Keep logo styles if needed, but remove animations unless desired */
